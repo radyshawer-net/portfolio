@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rady Shawer | Cybersecurity & Network Engineering</title>
+    <meta name="description"
+        content="Portfolio of Rady Shawer, Network Engineering Student & Aspiring Cybersecurity Specialist.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Cyber Background Canvas -->
+    <canvas id="cyber-bg"></canvas>
+
+    <!-- Initial Page Loader -->
+    <div class="page-loader">
+        <div class="loader-content">
+            <span class="bracket">[</span>
+            <span class="typing-loader">INITIALIZING_SYSTEM...</span>
+            <span class="bracket">]</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#home">&lt;Rady_Shawer/&gt;</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about"><span class="num">01.</span> About</a></li>
+            <li><a href="#skills"><span class="num">02.</span> Skills</a></li>
+            <li><a href="#projects"><span class="num">03.</span> Projects</a></li>
+            <li><a href="#experience"><span class="num">04.</span> Experience</a></li>
+            <li><a href="#contact" class="btn-outline">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="profile-image-container">
+                    <div class="profile-image-placeholder" title="Profile Photo">
+                        <img src="chatgpt.png" alt="Profile Photo" class="profile-img">
+                    </div>
+                </div>
+                <p class="greeting">System access granted. Welcome,</p>
+                <h1 class="name"><span class="typed-name"></span><span class="cursor">_</span></h1>
+                <h2 class="subtitle">Network Engineering Student | Aspiring Cybersecurity Specialist</h2>
+                <p class="tagline">Passionate about networking, cybersecurity, and building secure systems.</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn-primary">View Projects</a>
+                    <a href="#contact" class="btn-secondary">Contact Me</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section-fade">
+            <h2 class="section-title"><span class="num">01.</span> About Me</h2>
+            <div class="about-content glass-card">
+                <div class="about-text">
+                    <p><i class="fas fa-terminal icon-accent"></i> I am a <strong>Network Engineering student</strong>
+                        from Beheira, Egypt, currently building my career toward becoming a Cybersecurity Specialist.
+                    </p>
+                    <p><i class="fas fa-network-wired icon-accent"></i> I am deeply invested in studying CCNA and
+                        Network+ concepts, building a strong foundation in routing, switching, and network
+                        architectures.</p>
+                    <p><i class="fas fa-shield-alt icon-accent"></i> My primary interest lies in Cybersecurity and
+                        penetration testing fundamentals. I enjoy learning how systems can be exploited and, more
+                        importantly, how to secure them.</p>
+                    <p><i class="fab fa-java icon-accent"></i> Additionally, I have basic experience in Software
+                        Development, particularly in Java, developing client-server applications and exploring OOP
+                        concepts.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section-fade">
+            <h2 class="section-title"><span class="num">02.</span> Skills Archive</h2>
+            <div class="skills-grid">
+
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-server"></i> Networking</h3>
+                    <div class="skill-tags">
+                        <span class="tag">TCP/IP</span>
+                        <span class="tag">Subnetting</span>
+                        <span class="tag">CCNA Basics</span>
+                        <span class="tag">Routing & Switching</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-lock"></i> Cybersecurity</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Security Fundamentals</span>
+                        <span class="tag">Network Security</span>
+                        <span class="tag">Ethical Hacking (Beginner)</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-code"></i> Programming</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Java (Basic)</span>
+                        <span class="tag">OOP Concepts</span>
+                        <span class="tag">HTML/CSS/JS</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-tools"></i> Tools</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Git</span>
+                        <span class="tag">GitHub</span>
+                        <span class="tag">Linux/CLI</span>
+                        <span class="tag">Wireshark (Basic)</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section-fade">
+            <h2 class="section-title"><span class="num">03.</span> Real Networking Projects</h2>
+            <div class="projects-grid">
+
+                <div class="project-card glass-card">
+                    <div class="project-header">
+                        <i class="fas fa-network-wired folder-icon"></i>
+                        <span class="status-badge progress">Completed</span>
+                    </div>
+                    <h3 class="project-title">Network Design & Subnetting Lab</h3>
+                    <p class="project-desc">Designed and configured a small network topology using subnetting techniques
+                        to efficiently allocate IP addresses and improve network
+                        segmentation.<br><br><strong>Outcome:</strong> Improved understanding of IP addressing, network
+                        design, and routing fundamentals.</p>
+                    <div class="project-tech">
+                        <span>TCP/IP</span>
+                        <span>Subnetting</span>
+                        <span>Packet Tracer</span>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card">
+                    <div class="project-header">
+                        <i class="fas fa-server folder-icon"></i>
+                        <span class="status-badge progress">Completed</span>
+                    </div>
+                    <h3 class="project-title">Routing & Switching Practice Lab</h3>
+                    <p class="project-desc">Configured routing and switching in a simulated network environment to
+                        enable communication between multiple network segments.<br><br><strong>Outcome:</strong> Gained
+                        hands-on experience in network traffic flow and inter-network communication.</p>
+                    <div class="project-tech">
+                        <span>Static Routing</span>
+                        <span>Switching Concepts</span>
+                        <span>VLAN Basics</span>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card placeholder-card">
+                    <div class="project-header">
+                        <i class="fas fa-shield-alt folder-icon"></i>
+                        <span class="status-badge upcoming">Coming Soon</span>
+                    </div>
+                    <h3 class="project-title">Network Security Lab</h3>
+                    <p class="project-desc">A dedicated environment for practicing network security implementations,
+                        firewalls, and securing router/switch configurations.</p>
+                    <div class="project-tech">
+                        <span>Security</span>
+                        <span>Firewalls</span>
+                        <span>Hardening</span>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card placeholder-card">
+                    <div class="project-header">
+                        <i class="fas fa-user-secret folder-icon"></i>
+                        <span class="status-badge upcoming">Coming Soon</span>
+                    </div>
+                    <h3 class="project-title">Penetration Testing Practice</h3>
+                    <p class="project-desc">A localized virtual environment designed for practicing ethical hacking,
+                        vulnerability assessment, and exploit techniques.</p>
+                    <div class="project-tech">
+                        <span>Ethical Hacking</span>
+                        <span>Linux</span>
+                        <span>VMs</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience section-fade">
+            <h2 class="section-title"><span class="num">04.</span> Experience Log</h2>
+            <div class="timeline">
+                <div class="timeline-item glass-card">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Current</div>
+                    <h3>Freelance Learning Projects</h3>
+                    <p>Building hands-on labs and participating in self-directed studies focused on network engineering
+                        and foundational cybersecurity.</p>
+                </div>
+                <div class="timeline-item glass-card">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Ongoing</div>
+                    <h3>University Projects</h3>
+                    <p>Collaborating with peers on academic projects related to computer networking, client-server
+                        architectures, and software engineering.</p>
+                </div>
+                <div class="timeline-item glass-card">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Ongoing</div>
+                    <h3>Personal Projects</h3>
+                    <p>Developing individual applications like Java-based socket programming and networking simulations
+                        to bridge theory and practice.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section-fade">
+            <h2 class="section-title"><span class="num">05.</span> Establish Connection</h2>
+            <p class="contact-desc">My inbox is always open. Whether you have a question, an internship opportunity, or
+                just want to say hi, I'll try my best to get back to you!</p>
+
+            <div class="contact-container">
+                <div class="contact-info glass-card">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:rady.shawer.net@gmail.com">rady.shawer.net@gmail.com</a>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Beheira, Egypt</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/radyshawer-net" target="_blank" title="GitHub"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/rady-shawer/" target="_blank" title="LinkedIn"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <form class="contact-form glass-card">
+                    <div class="input-group">
+                        <input type="text" id="name" required placeholder=" ">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" required placeholder=" ">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="input-group">
+                        <textarea id="message" rows="5" required placeholder=" "></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <button type="submit" class="btn-primary">Send Transmission</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built by <a href="https://github.com/radyshawer-net" target="_blank">Rady Shawer</a></p>
+        <p class="cyber-text">System Status: Secure & Online</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

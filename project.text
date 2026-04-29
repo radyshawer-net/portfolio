@@ -1,0 +1,29 @@
+Modify my portfolio website to add a professional "Profile Image Section" in the Hero section.
+
+🔴 REQUIREMENTS:
+
+1. Add a circular profile image placeholder in the Hero section (top of the page).
+2. The image should be:
+   - Perfect circle shape (border-radius: 50%)
+   - Centered above or beside the name
+   - Medium-large size (professional headshot style)
+   - With a glowing cyber-style border (blue/neon accent matching the theme)
+
+3. If no image is provided, use a default placeholder:
+   - Generic avatar icon or gradient circle
+   - Text inside placeholder: "Add Your Photo"
+
+4. Add a subtle animation:
+   - Floating effect OR gentle pulse glow
+   - Smooth hover zoom effect
+
+5. Make sure it is responsive:
+   - Scales properly on mobile and desktop
+   - Always stays visually centered
+
+6. The structure should allow easy replacement later:
+   - Use a clear <img> tag or CSS background-image
+   - Make it easy for me to replace with my own photo later
+
+🎯 GOAL:
+Make the portfolio look professional and recruiter-ready with a modern profile picture section suitable for a Cybersecurity / Network Engineering student.
