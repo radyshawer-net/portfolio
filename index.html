@@ -39,6 +39,7 @@
             <li><a href="#skills"><span class="num">02.</span> Skills</a></li>
             <li><a href="#projects"><span class="num">03.</span> Projects</a></li>
             <li><a href="#experience"><span class="num">04.</span> Experience</a></li>
+            <li><a href="#certifications"><span class="num">05.</span> Certifications</a></li>
             <li><a href="#contact" class="btn-outline">Contact</a></li>
         </ul>
         <div class="hamburger">
@@ -137,6 +138,32 @@
         <section id="projects" class="projects section-fade">
             <h2 class="section-title"><span class="num">03.</span> Real Networking Projects</h2>
             <div class="projects-grid">
+                <div class="project-card glass-card featured-project">
+                    <div class="project-image-container">
+                        <img src="screenfromapp.jpeg" alt="NEXORA Mobile Application Screenshot"
+                            class="project-img-card">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div class="project-app-icon">
+                                <img src="app_icon.png" alt="NEXORA Logo">
+                            </div>
+                            <span class="status-badge progress">Completed</span>
+                        </div>
+                        <h3 class="project-title">NEXORA Mobile Application</h3>
+                        <p class="project-desc">A cross-platform mobile application built using Flutter, focusing on
+                            clean UI/UX design and smooth navigation. The app includes multiple screens and demonstrates
+                            practical knowledge of mobile app development and responsive layouts.</p>
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>Dart</span>
+                            <span>UI/UX Design</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="#" class="btn-primary btn-sm">View Project</a>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="project-card glass-card">
                     <div class="project-header">
@@ -232,9 +259,41 @@
             </div>
         </section>
 
+        <!-- Certifications Section -->
+        <section id="certifications" class="certifications section-fade">
+            <h2 class="section-title"><span class="num">05.</span> Certifications</h2>
+            <div class="certifications-grid">
+                <div class="cert-card glass-card">
+                    <div class="cert-image">
+                        <img src="CCNA.jpeg" alt="CCNA Certification" class="cert-img-placeholder">
+                    </div>
+                    <div class="cert-info">
+                        <h3 class="cert-title">CCNA Training Course (60 Hours)</h3>
+                        <p class="cert-org"><i class="fas fa-building"></i> ENCOVATION Academy</p>
+                        <p class="cert-date"><i class="fas fa-calendar-alt"></i> Jul 2025 – Sep 2025</p>
+                        <p class="cert-desc">Covered networking fundamentals, TCP/IP, subnetting, routing, and switching
+                            basics with hands-on lab experience.</p>
+                    </div>
+                </div>
+
+                <div class="cert-card glass-card">
+                    <div class="cert-image">
+                        <img src="Frontend-1.jpeg" alt="Frontend Level 2 Certificate" class="cert-img-placeholder">
+                    </div>
+                    <div class="cert-info">
+                        <h3 class="cert-title">Frontend Level 2 Course</h3>
+                        <p class="cert-org"><i class="fas fa-university"></i> Borg Al Arab Technological University</p>
+                        <p class="cert-date"><i class="fas fa-calendar-alt"></i> Jul 2024 – Sep 2024</p>
+                        <p class="cert-desc">Successfully completed Frontend Level 2 course, gaining theoretical and
+                            practical knowledge in web development.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Contact Section -->
         <section id="contact" class="contact section-fade">
-            <h2 class="section-title"><span class="num">05.</span> Establish Connection</h2>
+            <h2 class="section-title"><span class="num">06.</span> Establish Connection</h2>
             <p class="contact-desc">My inbox is always open. Whether you have a question, an internship opportunity, or
                 just want to say hi, I'll try my best to get back to you!</p>
 
@@ -279,6 +338,15 @@
         <p>Built by <a href="https://github.com/radyshawer-net" target="_blank">Rady Shawer</a></p>
         <p class="cyber-text">System Status: Secure & Online</p>
     </footer>
+
+    <!-- Certificate Modal -->
+    <div id="cert-modal" class="modal">
+        <span class="modal-close">&times;</span>
+        <div class="modal-content">
+            <img id="modal-img" src="" alt="Certificate Preview">
+            <div id="modal-caption"></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
