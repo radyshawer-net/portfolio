@@ -172,3 +172,42 @@ if(form) {
         }, 3000);
     });
 }
+
+// --- CERTIFICATE MODAL ---
+const modal = document.getElementById('cert-modal');
+const modalImg = document.getElementById('modal-img');
+const captionText = document.getElementById('modal-caption');
+const certImages = document.querySelectorAll('.cert-image img');
+const closeBtn = document.querySelector('.modal-close');
+
+if (modal && modalImg && closeBtn) {
+    certImages.forEach(img => {
+        img.addEventListener('click', () => {
+            modal.style.display = "block";
+            setTimeout(() => modal.classList.add('active'), 10);
+            modalImg.src = img.src;
+            captionText.innerHTML = img.alt;
+            document.body.style.overflow = 'hidden'; // Disable scroll
+        });
+    });
+
+    const closeModal = () => {
+        modal.classList.remove('active');
+        setTimeout(() => {
+            modal.style.display = "none";
+            document.body.style.overflow = 'auto'; // Re-enable scroll
+        }, 300);
+    };
+
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === "Escape" && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+}
