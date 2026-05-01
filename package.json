@@ -1,0 +1,15 @@
+{
+  "name": "rady-portfolio",
+  "version": "1.0.0",
+  "description": "Cybersecurity & Network Engineering Portfolio",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve ."
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.0"
+  },
+  "devDependencies": {
+    "serve": "^14.2.0"
+  }
+}
