@@ -153,23 +153,70 @@ window.addEventListener('resize', initCanvas);
 initCanvas();
 animate();
 
-// --- FORM SUBMISSION PREVENT (Demo purposes) ---
+// --- FORM SUBMISSION ---
 const form = document.querySelector('.contact-form');
-if(form) {
-    form.addEventListener('submit', (e) => {
+if (form) {
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
         const btn = form.querySelector('button');
         const originalText = btn.innerText;
-        btn.innerText = "Transmission Sent!";
-        btn.style.background = "rgba(45, 212, 191, 0.2)";
-        btn.style.color = "var(--accent-neon)";
-        btn.style.borderColor = "var(--accent-neon)";
-        
-        setTimeout(() => {
-            form.reset();
-            btn.innerText = originalText;
-            btn.style = "";
-        }, 3000);
+
+        // Form data
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            message: document.getElementById('message').value
+        };
+
+        // Loading State
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        btn.style.opacity = "0.7";
+
+        try {
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+
+            // Check if response is JSON
+            const contentType = response.headers.get("content-type");
+            let result;
+            if (contentType && contentType.indexOf("application/json") !== -1) {
+                result = await response.json();
+            } else {
+                throw new Error("Server error: API not found or not responding. If testing locally, use 'vercel dev'.");
+            }
+
+            if (response.ok) {
+                // Success
+                btn.innerHTML = '<i class="fas fa-check"></i> Transmission Sent!';
+                btn.style.background = "rgba(45, 212, 191, 0.2)";
+                btn.style.color = "var(--accent-neon)";
+                btn.style.borderColor = "var(--accent-neon)";
+                form.reset();
+            } else {
+                // Server-side error
+                throw new Error(result.error || 'Failed to send');
+            }
+        } catch (error) {
+            console.error('Submission error:', error);
+            btn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Error Failed';
+            btn.style.background = "rgba(239, 68, 68, 0.1)";
+            btn.style.color = "#ef4444";
+            btn.style.borderColor = "#ef4444";
+            alert("Error: " + error.message);
+        } finally {
+            // Reset button after delay
+            setTimeout(() => {
+                btn.disabled = false;
+                btn.innerText = originalText;
+                btn.style = "";
+            }, 4000);
+        }
     });
 }
 
